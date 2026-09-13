@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gold N Glitz Unisex Saloon - Premium salon in Shahganj, Agra.">
+  <title>Gold N Glitz Unisex Saloon | Agra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0b0907;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    :root {
+      --gold: #d6a84f;
+      --light-gold: #f1d38b;
+      --dark: #0b0907;
+      --card: #15110d;
+      --white: #fff;
+      --muted: #b9b1a7;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 7, 5, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(214,168,79,.2);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 29px;
+      font-weight: 700;
+      color: var(--light-gold);
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      color: #aaa;
+      margin-top: -4px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .menu {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 130px 7% 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 20% 40%, rgba(214,168,79,.13), transparent 35%),
+        #0b0907;
+    }
+
+    .hero-text small {
+      color: var(--gold);
+      letter-spacing: 4px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(55px, 7vw, 92px);
+      line-height: .9;
+      margin: 18px 0;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 530px;
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .rating {
+      margin-bottom: 25px;
+      color: var(--light-gold);
+      font-size: 18px;
+    }
+
+    .rating span {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 3px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn-gold:hover {
+      background: var(--light-gold);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: #111;
+    }
+
+    /* HERO IMAGE */
+    .hero-image {
+      position: relative;
+      height: 600px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.7);
+    }
+
+    .image-label {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      background: rgba(10,8,6,.88);
+      border-left: 3px solid var(--gold);
+      padding: 15px 20px;
+    }
+
+    .image-label strong {
+      color: var(--light-gold);
+      display: block;
+    }
+
+    .image-label small {
+      color: #aaa;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title small {
+      color: var(--gold);
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .section-title h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 55px;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 10px auto;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #100d0a;
+    }
+
+    .service-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: var(--card);
+      border: 1px solid rgba(214,168,79,.14);
+      overflow: hidden;
+      transition: .4s;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+    }
+
+    .service img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: .5s;
+    }
+
+    .service:hover img {
+      transform: scale(1.06);
+    }
+
+    .service-content {
+      padding: 25px;
+    }
+
+    .service h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+      color: var(--light-gold);
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .about-text small {
+      color: var(--gold);
+      letter-spacing: 3px;
+    }
+
+    .about-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 55px;
+      line-height: 1;
+      margin: 15px 0 20px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      background: #100d0a;
+    }
+
+    .gallery-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      height: 380px;
+      overflow: hidden;
+      border: 1px solid rgba(214,168,79,.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* WHY US */
+    .features {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 35px 20px;
+      border: 1px solid rgba(214,168,79,.16);
+    }
+
+    .feature .icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      color: var(--light-gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    /* REVIEW */
+    .review {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .stars {
+      color: var(--light-gold);
+      font-size: 30px;
+      letter-spacing: 4px;
+    }
+
+    .review h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      margin: 15px 0;
+    }
+
+    .review p {
+      color: var(--muted);
+    }
+
+    .score {
+      font-size: 50px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background:
+        linear-gradient(rgba(8,7,5,.82), rgba(8,7,5,.92)),
+        url("salon3.jpg") center/cover;
+    }
+
+    .cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 65px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    /* CONTACT */
+    .contact {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-box {
+      background: var(--card);
+      padding: 35px;
+      border: 1px solid rgba(214,168,79,.15);
+    }
+
+    .contact-box h3 {
+      color: var(--light-gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 13px 0;
+      font-size: 14px;
+    }
+
+    .contact-box strong {
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 35px 7%;
+      text-align: center;
+      border-top: 1px solid rgba(214,168,79,.15);
+      color: #888;
+      font-size: 12px;
+    }
+
+    footer b {
+      color: var(--gold);
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 27px;
+      z-index: 2000;
+      box-shadow: 0 5px 25px rgba(0,0,0,.4);
+    }
+
+    /* MOBILE */
+    @media(max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 120px;
+      }
+
+      .hero-image {
+        height: 480px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .logo {
+        font-size: 22px;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .hero-image {
+        height: 420px;
+      }
+
+      .service-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .about-text h2 {
+        font-size: 44px;
+      }
+
+      .cta h2 {
+        font-size: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      Gold N Glitz
+      <span>UNISEX SALOON • AGRA</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="menu">☰</div>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-text">
+    <small>PREMIUM UNISEX SALOON • AGRA</small>
+
+    <h1>
+      Look<br>
+      <span>Your Best.</span>
+    </h1>
+
+    <p>
+      Welcome to Gold N Glitz Unisex Saloon — where premium grooming,
+      modern styling and a relaxing salon experience come together.
+    </p>
+
+    <div class="rating">
+      ★★★★★
+      <span> 4.8 Rated Salon</span>
+    </div>
+
+    <div class="buttons">
+      <a class="btn btn-gold" href="tel:+917817960175">
+        📞 BOOK NOW
+      </a>
+
+      <a class="btn btn-outline"
+         href="https://wa.me/917817960175?text=Hello%20Gold%20N%20Glitz%20Saloon,%20I%20want%20to%20book%20an%20appointment."
+         target="_blank">
+        💬 WHATSAPP
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="salon1.jpg" alt="Gold N Glitz Unisex Saloon">
+    <div class="image-label">
+      <strong>Gold N Glitz</strong>
+      <small>Premium Salon Experience</small>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="section-title">
+    <small>WHAT WE OFFER</small>
+    <h2>Our Services</h2>
+    <p>
+      Professional grooming and beauty services for both men and women.
+    </p>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="service">
+      <img src="salon1.jpg" alt="Hair Styling">
+      <div class="service-content">
+        <h3>Hair Styling</h3>
+        <p>
+          Modern cuts, styling and professional hair care tailored to you.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="salon2.jpg" alt="Salon Interior">
+      <div class="service-content">
+        <h3>Hair Care</h3>
+        <p>
+          Premium hair care treatments for a fresh and healthy look.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="salon3.jpg" alt="Beauty Services">
+      <div class="service-content">
+        <h3>Beauty Care</h3>
+        <p>
+          Relaxing beauty and grooming services in a premium environment.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="salon2.jpg" alt="Grooming">
+      <div class="service-content">
+        <h3>Men & Women</h3>
+        <p>
+          Unisex salon services designed for everyone's grooming needs.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="about">
+
+    <div class="about-image">
+      <img src="salon3.jpg" alt="Gold N Glitz Salon">
+    </div>
+
+    <div class="about-text">
+      <small>ABOUT GOLD N GLITZ</small>
+
+      <h2>Style Meets Luxury</h2>
+
+      <p>
+        Gold N Glitz Unisex Saloon brings together elegant surroundings,
+        professional service and a comfortable atmosphere.
+      </p>
+
+      <p>
+        Whether you want a fresh haircut, grooming session or beauty care,
+        our salon is designed to give you a premium experience.
+      </p>
+
+      <div class="rating">
+        ★★★★★
+        <span> 4.8 Customer Rating</span>
+      </div>
+
+      <a href="tel:+917817960175" class="btn btn-gold">
+        CALL 7817960175
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+  <div class="section-title">
+    <small>OUR SPACE</small>
+    <h2>Salon Gallery</h2>
+    <p>
+      Take a look inside the Gold N Glitz experience.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <img src="salon1.jpg" alt="Gold N Glitz Reception">
+    </div>
+
+    <div class="gallery-item">
+      <img src="salon2.jpg" alt="Gold N Glitz Logo">
+    </div>
+
+    <div class="gallery-item">
+      <img src="salon3.jpg" alt="Gold N Glitz Styling Area">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section>
+
+  <div class="section-title">
+    <small>WHY CHOOSE US</small>
+    <h2>The Gold N Glitz Difference</h2>
+  </div>
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="icon">✦</div>
+      <h3>Premium Ambience</h3>
+      <p>
+        Enjoy your grooming session in an elegant and comfortable salon.
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">✂</div>
+      <h3>Professional Styling</h3>
+      <p>
+        Modern styling and grooming services for your personal look.
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="icon">★</div>
+      <h3>4.8 Rated</h3>
+      <p>
+        Trusted by customers with an excellent 4.8 rating.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REVIEW -->
+<section class="services">
+
+  <div class="review">
+
+    <div class="stars">★★★★★</div>
+
+    <h3>
+      Loved by Our Customers
+    </h3>
+
+    <p>
+      Gold N Glitz is focused on providing a quality salon experience
+      with professional grooming and a premium atmosphere.
+    </p>
+
+    <div class="score">4.8 / 5</div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+  <h2>Ready for a New Look?</h2>
+
+  <p>
+    Book your appointment with Gold N Glitz Unisex Saloon today.
+  </p>
+
+  <a href="tel:+917817960175" class="btn btn-gold">
+    📞 CALL NOW
+  </a>
+
+  <a
+    href="https://wa.me/917817960175?text=Hello%20Gold%20N%20Glitz%20Unisex%20Saloon,%20I%20want%20to%20book%20an%20appointment."
+    target="_blank"
+    class="btn btn-outline">
+    💬 WHATSAPP
+  </a>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="section-title">
+    <small>GET IN TOUCH</small>
+    <h2>Visit Gold N Glitz</h2>
+  </div>
+
+  <div class="contact">
+
+    <div class="contact-box">
+
+      <h3>Contact Details</h3>
+
+      <p>
+        📞 <strong>7817960175</strong>
+      </p>
+
+      <p>
+        📍 <strong>Address</strong><br>
+        SHRI BRAHMANI PALACE, PLOT NO - 123,<br>
+        AWADHPURI CHAURAHA,<br>
+        Pushpanjli Nagar Phase 3,<br>
+        Shahganj, Agra,<br>
+        Uttar Pradesh - 282010
+      </p>
+
+      <p>
+        ⭐ <strong>4.8 Rated</strong>
+      </p>
+
+      <br>
+
+      <a href="tel:+917817960175" class="btn btn-gold">
+        CALL SALON
+      </a>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <h3>Find Us</h3>
+
+      <iframe
+        src="https://www.google.com/maps?q=Gold%20N%20Glitz%20Unisex%20Saloon%20Shahganj%20Agra&output=embed"
+        width="100%"
+        height="320"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  © 2026 <b>Gold N Glitz Unisex Saloon</b> — Agra.
+  All Rights Reserved.
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+  class="whatsapp"
+  href="https://wa.me/917817960175?text=Hello%20Gold%20N%20Glitz,%20I%20want%20to%20book%20an%20appointment."
+  target="_blank"
+  aria-label="WhatsApp">
+  ☎
+</a>
+
+</body>
+</html>
